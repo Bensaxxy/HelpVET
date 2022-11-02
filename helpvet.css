@@ -729,6 +729,7 @@ footer{
 @media screen and (max-width:375px) {
     body{
         width: 100%;
+        overflow-x: hidden;
     }
     nav{
         width: 100%;
@@ -737,7 +738,7 @@ footer{
     }
 
     nav .nav-links{
-        float: right;
+        /* float: right; */
         font-family: 'Montserrat';
         font-weight: 500;
         display: block;
@@ -763,7 +764,6 @@ footer{
     }
     .checkbtn{
         float: left;
-        margin-right: 60px;
         display: block;
         cursor: pointer;
     }
@@ -774,9 +774,10 @@ footer{
         left: 0;
     }  
     .main{
+        width: 100%;
         padding: 90px 20px;
         align-items: center;
-        margin: auto;
+        /* margin: auto; */
     }
     .main1{
         flex-direction: column-reverse;
