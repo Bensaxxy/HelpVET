@@ -18,6 +18,7 @@ nav{
     padding: 20px 50px;
     box-shadow: 10px 10px 10px rgba(18, 125, 96, 0.08);
     z-index: 2;
+    animation: slideInFromTop 2s ease-in;
 }
 nav h2{
     float: left;
@@ -53,6 +54,13 @@ nav button{
     color: #127D60;
     cursor: pointer;
     padding: 10px 15px;
+    transition: 0.5s ease-in-out;
+}
+nav button:hover{
+    border: 1.5px solid #127D60;
+    background-color: #127D60;
+    color: white;
+    cursor: pointer;
 }
 #check{
     display: none;
@@ -70,7 +78,7 @@ nav button{
     justify-content: space-between;
     align-items: center;
     height: auto;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 
 .sub-main1{
@@ -78,6 +86,7 @@ nav button{
     display: block;
     /* width: 45%; */
     padding: 20px;
+    animation: slideInFromLeft 1s ease-in;
 }
 .Get{
     font-family: 'Montserrat';
@@ -98,6 +107,7 @@ nav button{
     margin-top: 20px;
     display: flex;
     cursor: pointer;
+    transition: 0.4s;
 }
 .arrow a{
     border: none;
@@ -110,12 +120,13 @@ nav button{
     cursor: pointer;
 }
 .arrowpng{
-    width: 30px;
-    height: 30px;
-    margin-left: 15px;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
 }
 .arrow:hover{
-    transform: scale(0.9);
+    border-bottom: #0d5945 solid;
+    width: 64%;
 }
 .arrow a:hover{
     color: #0d5945;
@@ -123,6 +134,7 @@ nav button{
 .img1{
     width: 650px;
     padding: 0px 50;
+    animation: slideInFromRight 1.5s ease-in;
 }
 .main2{
     display: flex;
@@ -130,6 +142,7 @@ nav button{
     text-align: center;
     padding: 0 200px;
     margin-bottom: 50px;
+    animation: slideInFromBottom 1.5s ease-out;
 }
 .sub-main2{
     display: block;
@@ -429,6 +442,7 @@ article p{
     width: 280px;
     height: 320px;
     display: block;
+    padding: 0 14px;
     transition: ease-out 0.5s;
 }
 .card:hover{
@@ -442,7 +456,7 @@ article p{
     height: 160px;
 }
 .card h2{
-    font-size: 22px;
+    font-size: 20px;
     background-color: white;
     margin-bottom: 10px;
 }
@@ -541,6 +555,48 @@ footer{
     color: #FFFFFF;
     padding: 18px 0;
 }
+
+/* animation */
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+
 
 @media screen and (max-width:628px) {
     nav{
@@ -801,6 +857,8 @@ footer{
         text-align: center;
         padding: 0 50px;
         margin-bottom: 30px;
+        animation: slideInFromright 2s ease-in;
+
     }
     .sub-main2{
         display: block;
